@@ -1,9 +1,5 @@
 function getpic() {
-  var s=sool.value;
-  var ur='https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=';
-  var rest="&";
-  var r="page=1&api_key=4iWhuYckFgwjufu2vCPzb3OB5B5gdqUeXw2PJvF3";
-  var url=ur+s+rest+r;
+  var url='https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol='+sool.value+'&'+'page=1&api_key=4iWhuYckFgwjufu2vCPzb3OB5B5gdqUeXw2PJvF3';
 fetch(url)
         .then(resp =>resp.json())
         .then(data =>{
